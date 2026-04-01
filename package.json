@@ -2,10 +2,10 @@
   "id": "com.arisen.taskgraph",
   "name": "Arisen Task Graph",
   "version": "1.0.0",
-  "description": "High-performance DAG-based internal job system for Arisen Engine.",
   "author": "Arisen Team",
+  "description": "High-performance DAG-based internal job system for Arisen Engine.",
   "entry": {
-    "assembly": "Com.Arisen.TaskGraph.dll",
+    "assembly": "Com.Arisen.Taskgraph.dll",
     "class": "ArisenEngine.Threading.TaskGraphPackage"
   },
   "dependencies": {

@@ -10,11 +10,10 @@ namespace ArisenEngine.Threading;
 /// <summary>
 /// The primary entry point for scheduling and executing DAG-based tasks.
 /// </summary>
-public sealed class TaskGraph : IDisposable
+public partial class TaskGraph : IDisposable
 {
     private readonly TaskWorker[] m_Workers;
     private readonly Graph<TaskNode> m_Graph = new();
-    private readonly GraphCompiler<TaskNode> m_Compiler = new();
 
     public TaskGraph(int workerCount = 0)
     {
@@ -54,7 +53,7 @@ public sealed class TaskGraph : IDisposable
     /// </summary>
     public void Execute()
     {
-        var compiled = m_Compiler.Compile(m_Graph);
+        var compiled = GraphCompiler.Compile(m_Graph);
         
         // Execute layer by layer to respect dependencies
         foreach (var layer in compiled.ParallelLayers)
