@@ -79,6 +79,9 @@ public partial class TaskGraph : IDisposable
             // Wait for the entire layer to finish before moving to the next
             countdown.Wait();
         }
+
+        // B1: Clear the graph AFTER successful execution to prevent task accumulation across frames or surface calls.
+        m_Graph.Clear();
     }
 
     public void Dispose()
