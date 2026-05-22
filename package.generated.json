@@ -1,0 +1,6 @@
+{
+  "entry": {
+    "assembly": "Com.Arisen.Taskgraph.dll",
+    "class": "ArisenEngine.Threading.TaskGraphPackage"
+  }
+}
