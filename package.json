@@ -2,6 +2,7 @@
   "id": "com.arisen.taskgraph",
   "name": "Arisen Task Graph",
   "version": "1.0.0",
+  "layer": "foundation",
   "author": "Arisen Team",
   "description": "High-performance DAG-based internal job system for Arisen Engine.",
   "entry": {
